@@ -55,6 +55,106 @@ const navLinks = document.querySelectorAll('nav .nav_link').forEach(link => {
     }
 })
 
+/* PROJECT DETAILS SLIDER */
+const projectSlider = document.querySelector('[data-project-slider]')
+if(projectSlider){
+    const cards = Array.from(projectSlider.querySelectorAll('.project_card'))
+    const dotsContainer = document.querySelector('[data-project-dots]')
+    const prevButton = document.querySelector('.project_nav--prev')
+    const nextButton = document.querySelector('.project_nav--next')
+    let activeIndex = 0
+    let scrollTimeout
+
+    const setActiveDot = () => {
+        if(!dotsContainer){
+            return
+        }
+
+        const dots = dotsContainer.querySelectorAll('.project_dot')
+        dots.forEach((dot, index) => {
+            const isActive = index === activeIndex
+            dot.classList.toggle('project_dot--active', isActive)
+            dot.setAttribute('aria-current', isActive ? 'true' : 'false')
+        })
+    }
+
+    const updateNavButtons = () => {
+        if(prevButton){
+            prevButton.disabled = activeIndex === 0
+        }
+        if(nextButton){
+            nextButton.disabled = activeIndex === cards.length - 1
+        }
+    }
+
+    const scrollToCard = (index) => {
+        if(!cards[index]){
+            return
+        }
+        activeIndex = index
+        projectSlider.scrollTo({
+            left: cards[index].offsetLeft,
+            behavior: 'smooth'
+        })
+        setActiveDot()
+        updateNavButtons()
+    }
+
+    if(dotsContainer){
+        dotsContainer.innerHTML = ''
+        cards.forEach((card, index) => {
+            const dot = document.createElement('button')
+            dot.type = 'button'
+            dot.className = 'project_dot'
+            const title = card.querySelector('.project_title')
+            dot.setAttribute('aria-label', `Go to ${title ? title.textContent : `project ${index + 1}`}`)
+            dot.addEventListener('click', () => scrollToCard(index))
+            dotsContainer.appendChild(dot)
+        })
+    }
+
+    if(prevButton){
+        prevButton.addEventListener('click', () => scrollToCard(activeIndex - 1))
+    }
+
+    if(nextButton){
+        nextButton.addEventListener('click', () => scrollToCard(activeIndex + 1))
+    }
+
+    projectSlider.addEventListener('scroll', () => {
+        window.clearTimeout(scrollTimeout)
+        scrollTimeout = window.setTimeout(() => {
+            const sliderCenter = projectSlider.scrollLeft + projectSlider.offsetWidth / 2
+            let closestIndex = 0
+            let closestDistance = Infinity
+            cards.forEach((card, index) => {
+                const cardCenter = card.offsetLeft + card.offsetWidth / 2
+                const distance = Math.abs(sliderCenter - cardCenter)
+                if(distance < closestDistance){
+                    closestDistance = distance
+                    closestIndex = index
+                }
+            })
+
+            if(activeIndex !== closestIndex){
+                activeIndex = closestIndex
+                setActiveDot()
+                updateNavButtons()
+            }
+        }, 120)
+    })
+
+    const hash = window.location.hash.replace('#', '')
+    if(hash){
+        const targetIndex = cards.findIndex(card => card.id === hash)
+        if(targetIndex >= 0){
+            scrollToCard(targetIndex)
+        }
+    }
+
+    setActiveDot()
+    updateNavButtons()
+}
 
 /* SCROLL REVEAL ANIMATION */
 const sr = ScrollReveal({
