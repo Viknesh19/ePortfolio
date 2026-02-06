@@ -763,6 +763,7 @@ nav a:is(:link, :active, :visited).active{
 
 .project_details{
   padding-block: 1rem;
+  width: 100%;
 }
 
 .project_card{
@@ -772,15 +773,18 @@ nav a:is(:link, :active, :visited).active{
   display: grid;
   gap: 1.5rem;
   border: 2px solid transparent;
-  transition: border .4s ease;
+  transition: border .4s ease, transform .4s ease, box-shadow .4s ease;
 }
 
 .project_card:hover{
   border-color: var(--first-color);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px hsla(var(--hue), 25%, 10%, 0.35);
 }
 
 .project_media{
   justify-self: center;
+  position: relative;
 }
 
 .project_img{
@@ -789,6 +793,29 @@ nav a:is(:link, :active, :visited).active{
   border-radius: 1.25rem;
   border: 3px solid var(--first-color);
   filter: drop-shadow(5px 12px 5px hsla(var(--hue), 10%, 10%, 0.4));
+}
+
+.project_card--featured{
+  background: linear-gradient(135deg, hsla(var(--hue), 15%, 18%, 0.9), hsla(var(--hue), 20%, 12%, 0.95));
+  border-color: hsla(var(--hue), 85%, 55%, 0.3);
+}
+
+.project_media--hero{
+  align-self: stretch;
+}
+
+.project_media-glow{
+  position: absolute;
+  inset: -15% 10% 55% 10%;
+  background: radial-gradient(circle, hsla(var(--hue), 85%, 55%, 0.35), transparent 65%);
+  z-index: -1;
+}
+
+.project_tagline{
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  letter-spacing: .08rem;
+  text-transform: uppercase;
 }
 
 .project_header{
@@ -816,6 +843,56 @@ nav a:is(:link, :active, :visited).active{
   text-align: left;
 }
 
+.project_tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-bottom: 1.5rem;
+}
+
+.project_tags span{
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  background-color: hsla(var(--hue), 85%, 55%, 0.15);
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  letter-spacing: .04rem;
+}
+
+.project_meta{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background-color: hsla(var(--hue), 15%, 18%, 0.8);
+  border: 1px solid hsla(var(--hue), 20%, 40%, 0.2);
+}
+
+.project_meta-label{
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  margin-bottom: .35rem;
+}
+
+.project_meta-value{
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.project_section{
+  margin-bottom: 1.5rem;
+}
+
+.project_section h4{
+  color: var(--title-color);
+  font-size: var(--h3-font-size);
+  margin-bottom: .75rem;
+}
+
 .project_list{
   display: grid;
   gap: .5rem;
@@ -824,10 +901,19 @@ nav a:is(:link, :active, :visited).active{
   list-style: disc;
 }
 
-.project_back{
+.project_actions{
   display: flex;
-  justify-content: center;
-  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.details_link--ghost{
+  background-color: transparent;
+  border: 1px solid var(--first-color);
+}
+
+.details_link--ghost:hover{
+  background-color: var(--first-color);
 }
 
 /* CONTACT */
@@ -991,6 +1077,13 @@ nav a:is(:link, :active, :visited).active{
 
 /* For medium devices */
 @media screen and (min-width: 576px){
+  .project_details{
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: stretch;
+  }
+}
+
+@media screen and (min-width: 576px){
   .home_container,
   .about_container,
   .skills_container,
@@ -1001,8 +1094,7 @@ nav a:is(:link, :active, :visited).active{
   .edu_container2,
   .exp1_container,
   .exp2_container,
-  .interest_container,
-  .project_details{
+  .interest_container{
     grid-template-columns: 360px;
     justify-content: center;
   }
