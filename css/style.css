@@ -763,13 +763,8 @@ nav a:is(:link, :active, :visited).active{
 
 .project_details{
   padding-block: 1rem;
-  width: 100%;
+  width: auto;
   row-gap: 2rem;
-}
-
-.project_details_container{
-  max-width: 100%;
-  overflow: hidden;
 }
 
 .project_slider{
