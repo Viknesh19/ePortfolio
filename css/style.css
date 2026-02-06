@@ -766,12 +766,27 @@ nav a:is(:link, :active, :visited).active{
   width: 100%;
 }
 
+.project_slider{
+  position: relative;
+}
+
+.project_track{
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 1rem 0 2.5rem;
+}
+
 .project_card{
   background-color: var(--body-color);
   padding: 2rem;
   border-radius: 1.5rem;
   display: grid;
   gap: 1.5rem;
+  min-width: 100%;
+  scroll-snap-align: center;
   border: 2px solid transparent;
   transition: border .4s ease, transform .4s ease, box-shadow .4s ease;
 }
@@ -802,6 +817,63 @@ nav a:is(:link, :active, :visited).active{
 
 .project_media--hero{
   align-self: stretch;
+}
+
+.project_nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsla(var(--hue), 15%, 18%, 0.9);
+  color: var(--title-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .3s ease, background-color .3s ease, opacity .3s ease;
+  z-index: 2;
+}
+
+.project_nav:hover{
+  transform: translateY(-50%) scale(1.05);
+  background-color: var(--first-color);
+}
+
+.project_nav:disabled{
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.project_nav--prev{
+  left: -0.75rem;
+}
+
+.project_nav--next{
+  right: -0.75rem;
+}
+
+.project_dots{
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+}
+
+.project_dot{
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  border: none;
+  background-color: hsla(var(--hue), 15%, 60%, 0.4);
+  cursor: pointer;
+  transition: transform .3s ease, background-color .3s ease;
+}
+
+.project_dot--active{
+  background-color: var(--first-color);
+  transform: scale(1.2);
 }
 
 .project_media-glow{
@@ -1103,6 +1175,18 @@ nav a:is(:link, :active, :visited).active{
 @media screen and (min-width: 768px){
   .nav_menu{
     width: 55%;
+  }
+
+  .project_card{
+    min-width: 85%;
+  }
+
+  .project_nav--prev{
+    left: -1.5rem;
+  }
+
+  .project_nav--next{
+    right: -1.5rem;
   }
 
   .home_container,

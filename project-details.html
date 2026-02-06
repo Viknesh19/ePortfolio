@@ -50,69 +50,383 @@
         <h2 class="section_title">Highlights &amp; Outcomes</h2>
         <hr>
 
-        <div class="project_details container grid">
-            <article class="project_card project_card--featured" id="fyp">
-                <div class="project_media project_media--hero">
-                    <img src="img/wd.jpg" alt="Final year project mobile app preview" class="project_img">
-                    <div class="project_media-glow"></div>
+        <div class="project_details container">
+            <div class="project_slider">
+                <button class="project_nav project_nav--prev" type="button" aria-label="Show previous project">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="project_track" data-project-slider>
+                    <article class="project_card project_card--featured" id="fyp">
+                        <div class="project_media project_media--hero">
+                            <img src="img/wd.jpg" alt="Final year project mobile app preview" class="project_img">
+                            <div class="project_media-glow"></div>
+                        </div>
+                        <div class="project_content">
+                            <div class="project_header">
+                                <p class="project_tagline">Capstone Project · 2024</p>
+                                <h3 class="project_title">Final Year Project (FYP)</h3>
+                                <span class="project_role">Mobile App · UI/UX · AI Chatbot</span>
+                            </div>
+                            <p class="project_description">
+                                A conversational mobile assistant that simplifies campus life, built with a human-first interface, smart
+                                responses, and a polished experience. The solution blends seamless onboarding, contextual help, and
+                                personalized guidance for daily academic tasks.
+                            </p>
+
+                            <div class="project_tags">
+                                <span>Figma</span>
+                                <span>Flutter</span>
+                                <span>Firebase</span>
+                                <span>Dialogflow</span>
+                            </div>
+
+                            <div class="project_meta">
+                                <div>
+                                    <p class="project_meta-label">Role</p>
+                                    <p class="project_meta-value">UI/UX Designer · Mobile Developer</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Duration</p>
+                                    <p class="project_meta-value">16 Weeks</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Focus</p>
+                                    <p class="project_meta-value">Conversational UX · Accessibility</p>
+                                </div>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Key Features</h4>
+                                <ul class="project_list">
+                                    <li>Guided onboarding, smart prompts, and quick actions for effortless navigation.</li>
+                                    <li>AI chatbot that answers FAQs, schedules reminders, and recommends resources.</li>
+                                    <li>Clean, modular design system for consistent look and fast iteration.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Impact</h4>
+                                <p class="project_description">
+                                    Delivered a ready-to-demo prototype with a 40% faster task completion flow during usability tests and
+                                    strong feedback for its calm, modern visual language.
+                                </p>
+                            </div>
+
+                            <div class="project_actions">
+                                <a class="details_link" href="exp.html">Back to Experience</a>
+                                <a class="details_link details_link--ghost" href="index.html#contact">Start a Project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project_card" id="bookearth">
+                        <div class="project_media">
+                            <img src="img/webd.jpg" alt="Bookearth Worm web game artwork" class="project_img">
+                        </div>
+                        <div class="project_content">
+                            <div class="project_header">
+                                <p class="project_tagline">Interactive Game · 2023</p>
+                                <h3 class="project_title">Web-Based Game - Bookearth Worm</h3>
+                                <span class="project_role">Game Logic · UI/UX · Web Design</span>
+                            </div>
+                            <p class="project_description">
+                                An educational browser game that blends storytelling with quick challenges, encouraging users to learn
+                                through play. Designed for smooth keyboard control, clear objectives, and visual feedback.
+                            </p>
+
+                            <div class="project_tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Canvas</span>
+                            </div>
+
+                            <div class="project_meta">
+                                <div>
+                                    <p class="project_meta-label">Role</p>
+                                    <p class="project_meta-value">Designer · Developer</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Duration</p>
+                                    <p class="project_meta-value">6 Weeks</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Focus</p>
+                                    <p class="project_meta-value">Gameplay Flow · Visual Feedback</p>
+                                </div>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Key Features</h4>
+                                <ul class="project_list">
+                                    <li>Core gameplay loop with score tracking, levels, and dynamic obstacles.</li>
+                                    <li>Custom UI screens for instructions, pause, and level completion.</li>
+                                    <li>Responsive layout for desktop and tablet browsers.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Impact</h4>
+                                <p class="project_description">
+                                    Increased engagement during demo day with players completing an average of four levels per session.
+                                </p>
+                            </div>
+
+                            <div class="project_actions">
+                                <a class="details_link" href="exp.html">Back to Experience</a>
+                                <a class="details_link details_link--ghost" href="index.html#contact">Start a Project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project_card" id="data-analysis">
+                        <div class="project_media">
+                            <img src="img/pythonfl.png" alt="Data analysis dashboard preview" class="project_img">
+                        </div>
+                        <div class="project_content">
+                            <div class="project_header">
+                                <p class="project_tagline">Analytics · 2023</p>
+                                <h3 class="project_title">Data Analysis &amp; Visualization</h3>
+                                <span class="project_role">Data Cleaning · Dashboards · Insights</span>
+                            </div>
+                            <p class="project_description">
+                                Explored datasets using Python to uncover patterns, build clear dashboards, and turn raw data into
+                                actionable insights for stakeholders.
+                            </p>
+
+                            <div class="project_tags">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>Matplotlib</span>
+                                <span>Seaborn</span>
+                            </div>
+
+                            <div class="project_meta">
+                                <div>
+                                    <p class="project_meta-label">Role</p>
+                                    <p class="project_meta-value">Data Analyst</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Duration</p>
+                                    <p class="project_meta-value">8 Weeks</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Focus</p>
+                                    <p class="project_meta-value">Storytelling · KPI Tracking</p>
+                                </div>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Key Features</h4>
+                                <ul class="project_list">
+                                    <li>Cleaned and merged datasets to ensure consistent metrics.</li>
+                                    <li>Built visual dashboards highlighting trends and anomalies.</li>
+                                    <li>Delivered concise insight summaries for quick decision-making.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Impact</h4>
+                                <p class="project_description">
+                                    Helped stakeholders prioritize three high-impact initiatives based on surfaced trends.
+                                </p>
+                            </div>
+
+                            <div class="project_actions">
+                                <a class="details_link" href="exp.html">Back to Experience</a>
+                                <a class="details_link details_link--ghost" href="index.html#contact">Start a Project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project_card" id="pne-internship">
+                        <div class="project_media">
+                            <img src="img/java.jpg" alt="IT internship project desk setup" class="project_img">
+                        </div>
+                        <div class="project_content">
+                            <div class="project_header">
+                                <p class="project_tagline">Internship · 2022</p>
+                                <h3 class="project_title">PNE Electric Sdn. Bhd. Internship</h3>
+                                <span class="project_role">IT Support · Web Systems · Documentation</span>
+                            </div>
+                            <p class="project_description">
+                                Supported internal tools by improving ticketing workflows, updating product summary pages, and assisting
+                                staff with daily IT needs.
+                            </p>
+
+                            <div class="project_tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>PHP</span>
+                                <span>Helpdesk</span>
+                            </div>
+
+                            <div class="project_meta">
+                                <div>
+                                    <p class="project_meta-label">Role</p>
+                                    <p class="project_meta-value">IT Intern</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Duration</p>
+                                    <p class="project_meta-value">12 Weeks</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Focus</p>
+                                    <p class="project_meta-value">Support · Process Improvement</p>
+                                </div>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Key Features</h4>
+                                <ul class="project_list">
+                                    <li>Refined ticket categories and response templates for faster resolutions.</li>
+                                    <li>Updated product pages with clearer specifications and layouts.</li>
+                                    <li>Provided onboarding and account setup for new team members.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Impact</h4>
+                                <p class="project_description">
+                                    Reduced repeat helpdesk questions and improved clarity across product documentation.
+                                </p>
+                            </div>
+
+                            <div class="project_actions">
+                                <a class="details_link" href="exp.html">Back to Experience</a>
+                                <a class="details_link details_link--ghost" href="index.html#contact">Start a Project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project_card" id="auto-label">
+                        <div class="project_media">
+                            <img src="img/taek.jpg" alt="Auto labeling system equipment" class="project_img">
+                        </div>
+                        <div class="project_content">
+                            <div class="project_header">
+                                <p class="project_tagline">Automation · 2022</p>
+                                <h3 class="project_title">PNE Auto Label System (C#)</h3>
+                                <span class="project_role">Desktop App · Sensors · Printing</span>
+                            </div>
+                            <p class="project_description">
+                                Created a weight-balancing system that reads sensor data and prints accurate labels, ensuring reliable
+                                output for warehouse operations.
+                            </p>
+
+                            <div class="project_tags">
+                                <span>C#</span>
+                                <span>.NET</span>
+                                <span>SQL</span>
+                                <span>Hardware IO</span>
+                            </div>
+
+                            <div class="project_meta">
+                                <div>
+                                    <p class="project_meta-label">Role</p>
+                                    <p class="project_meta-value">Developer</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Duration</p>
+                                    <p class="project_meta-value">5 Weeks</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Focus</p>
+                                    <p class="project_meta-value">Accuracy · Automation</p>
+                                </div>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Key Features</h4>
+                                <ul class="project_list">
+                                    <li>Integrated weight sensors for real-time measurement.</li>
+                                    <li>Auto-generated labels with safeguards for out-of-range values.</li>
+                                    <li>Streamlined UI for quick operator training.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Impact</h4>
+                                <p class="project_description">
+                                    Improved labeling accuracy and reduced manual double-checks on the production floor.
+                                </p>
+                            </div>
+
+                            <div class="project_actions">
+                                <a class="details_link" href="exp.html">Back to Experience</a>
+                                <a class="details_link details_link--ghost" href="index.html#contact">Start a Project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project_card" id="leadership">
+                        <div class="project_media">
+                            <img src="img/run.jpg" alt="Leadership and service activities" class="project_img">
+                        </div>
+                        <div class="project_content">
+                            <div class="project_header">
+                                <p class="project_tagline">Leadership · 2023-2024</p>
+                                <h3 class="project_title">Leadership &amp; Service</h3>
+                                <span class="project_role">Teaching · Volunteer Work · Events</span>
+                            </div>
+                            <p class="project_description">
+                                Balanced part-time tutoring and volunteer event operations, supporting student growth while coordinating
+                                audience flow and guest services for large venues.
+                            </p>
+
+                            <div class="project_tags">
+                                <span>Mentorship</span>
+                                <span>Event Ops</span>
+                                <span>Communication</span>
+                                <span>Teamwork</span>
+                            </div>
+
+                            <div class="project_meta">
+                                <div>
+                                    <p class="project_meta-label">Role</p>
+                                    <p class="project_meta-value">Tutor · Volunteer</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Duration</p>
+                                    <p class="project_meta-value">Ongoing</p>
+                                </div>
+                                <div>
+                                    <p class="project_meta-label">Focus</p>
+                                    <p class="project_meta-value">Guidance · Event Support</p>
+                                </div>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Key Features</h4>
+                                <ul class="project_list">
+                                    <li>Structured lesson plans tailored to student needs.</li>
+                                    <li>Front-of-house support for attendee check-in and seating.</li>
+                                    <li>Real-time coordination with stage and security teams.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project_section">
+                                <h4>Impact</h4>
+                                <p class="project_description">
+                                    Helped students improve confidence while ensuring smooth attendee experiences at live events.
+                                </p>
+                            </div>
+
+                            <div class="project_actions">
+                                <a class="details_link" href="exp.html">Back to Experience</a>
+                                <a class="details_link details_link--ghost" href="index.html#contact">Start a Project</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <div class="project_content">
-                    <div class="project_header">
-                        <p class="project_tagline">Capstone Project · 2024</p>
-                        <h3 class="project_title">Final Year Project (FYP)</h3>
-                        <span class="project_role">Mobile App · UI/UX · AI Chatbot</span>
-                    </div>
-                    <p class="project_description">
-                        A conversational mobile assistant that simplifies campus life, built with a human-first interface, smart
-                        responses, and a polished experience. The solution blends seamless onboarding, contextual help, and
-                        personalized guidance for daily academic tasks.
-                    </p>
 
-                    <div class="project_tags">
-                        <span>Figma</span>
-                        <span>Flutter</span>
-                        <span>Firebase</span>
-                        <span>Dialogflow</span>
-                    </div>
+                <button class="project_nav project_nav--next" type="button" aria-label="Show next project">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
 
-                    <div class="project_meta">
-                        <div>
-                            <p class="project_meta-label">Role</p>
-                            <p class="project_meta-value">UI/UX Designer · Mobile Developer</p>
-                        </div>
-                        <div>
-                            <p class="project_meta-label">Duration</p>
-                            <p class="project_meta-value">16 Weeks</p>
-                        </div>
-                        <div>
-                            <p class="project_meta-label">Focus</p>
-                            <p class="project_meta-value">Conversational UX · Accessibility</p>
-                        </div>
-                    </div>
-
-                    <div class="project_section">
-                        <h4>Key Features</h4>
-                        <ul class="project_list">
-                            <li>Guided onboarding, smart prompts, and quick actions for effortless navigation.</li>
-                            <li>AI chatbot that answers FAQs, schedules reminders, and recommends resources.</li>
-                            <li>Clean, modular design system for consistent look and fast iteration.</li>
-                        </ul>
-                    </div>
-
-                    <div class="project_section">
-                        <h4>Impact</h4>
-                        <p class="project_description">
-                            Delivered a ready-to-demo prototype with a 40% faster task completion flow during usability tests and
-                            strong feedback for its calm, modern visual language.
-                        </p>
-                    </div>
-
-                    <div class="project_actions">
-                        <a class="details_link" href="exp.html">Back to Experience</a>
-                        <a class="details_link details_link--ghost" href="index.html#contact">Start a Project</a>
-                    </div>
-                </div>
-            </article>
+            <div class="project_dots" data-project-dots aria-label="Project navigation"></div>
         </div>
     </section>
 
