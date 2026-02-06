@@ -764,10 +764,17 @@ nav a:is(:link, :active, :visited).active{
 .project_details{
   padding-block: 1rem;
   width: 100%;
+  row-gap: 2rem;
+}
+
+.project_details_container{
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .project_slider{
   position: relative;
+  padding-inline: 2.5rem;
 }
 
 .project_track{
@@ -848,11 +855,11 @@ nav a:is(:link, :active, :visited).active{
 }
 
 .project_nav--prev{
-  left: -0.75rem;
+  left: 0;
 }
 
 .project_nav--next{
-  right: -0.75rem;
+  right: 0;
 }
 
 .project_dots{
@@ -1149,13 +1156,6 @@ nav a:is(:link, :active, :visited).active{
 
 /* For medium devices */
 @media screen and (min-width: 576px){
-  .project_details{
-    grid-template-columns: minmax(0, 1fr);
-    justify-content: stretch;
-  }
-}
-
-@media screen and (min-width: 576px){
   .home_container,
   .about_container,
   .skills_container,
@@ -1166,7 +1166,8 @@ nav a:is(:link, :active, :visited).active{
   .edu_container2,
   .exp1_container,
   .exp2_container,
-  .interest_container{
+  .interest_container,
+  .project_details{
     grid-template-columns: 360px;
     justify-content: center;
   }
