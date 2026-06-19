@@ -159,16 +159,20 @@ if(projectSlider){
 /* SCROLL REVEAL ANIMATION */
 const sr = ScrollReveal({
     origin: 'top',
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
+    distance: '42px',
+    duration: 850,
+    delay: 120,
+    easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+    reset: false,
 })
 
-sr.reveal(`.home_data, .home_social, .contact`)
-sr.reveal(`.home_image`, {origin:'bottom'})
+sr.reveal(`.hero_badge, .home_subtitle, .home_title, .home_education, .home_description, .home_actions, .hero_signals`, {interval: 70})
+sr.reveal(`.page_kicker, .page_title, .page_description`, {interval: 70})
+sr.reveal(`.home_social, .contact`)
+sr.reveal(`.home_image`, {origin:'right', delay: 220})
 sr.reveal(`.about_data, .skills_data`, {origin:'left'})
 sr.reveal(`.about_image, .skills_content`, {origin:'right'})
-sr.reveal(`.exp_card, .edu_card, .expe_card`, {interval: 1000})
+sr.reveal(`.exp_card, .edu_card, .expe_card, .skill_tile`, {interval: 90})
 
 //edu.index
 sr.reveal(`.edu_data, .edu2_image`)
@@ -179,5 +183,5 @@ sr.reveal(`.int_card`, {interval: 100})
 sr.reveal(`.exp1, .exp2`)
 sr.reveal(`.exp1_image, .exp2_data`, {origin:'left'})
 sr.reveal(`.exp1_data, .exp2_image`, {origin:'right'})
-sr.reveal(`.exp1, .exp1_image, .exp1_data`, {interval: 1000})
-sr.reveal(`.exp2, .exp2_image, .exp2_data`, {interval: 1000})
+sr.reveal(`.exp1, .exp1_image, .exp1_data`, {interval: 120})
+sr.reveal(`.exp2, .exp2_image, .exp2_data`, {interval: 120})

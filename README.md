@@ -1,6 +1,6 @@
 # ePortfolio
 
-Personal e-portfolio website for Vikneshwaran Murugaian. The site presents profile information, education, certifications, skills, experience, selected projects, and a contact form.
+Personal e-portfolio website for Vikneshwaran Murugaian. The site presents profile information, education, certifications, skills, experience, selected projects, and a contact form with a modern IT-focused visual direction.
 
 ## Overview
 
@@ -14,6 +14,13 @@ Main sections include:
 - Skills and technology interests
 - Experience and project highlights
 - Detailed project outcomes and tools used
+
+## Design Direction
+
+- Recruiter-friendly IT portfolio with a dark technical interface, grid backdrop, contained panels, and concise case-study content
+- Rectangular media panels instead of blob/shaped image masks
+- Responsive dashboard-style sections for skills, education, experience, and project details
+- Accessible focus states, reduced-motion support, and labeled contact form inputs
 
 ## Pages
 
@@ -71,6 +78,12 @@ Then visit:
 http://localhost:8000
 ```
 
+You can also use Node if available:
+
+```bash
+npx serve .
+```
+
 ## Contact Form
 
 The contact form is handled by EmailJS in `js/email.js`.
@@ -100,3 +113,4 @@ When deploying, make sure the folder structure stays unchanged so image, CSS, Ja
 - Update repeated navigation/footer links consistently across all HTML pages.
 - Test the site on mobile and desktop after layout or CSS changes.
 - Test the EmailJS contact flow after changing `index.html` or `js/email.js`.
+- Preserve the modern tech/recruiter design direction: compact headings, contained sections, rectangular image presentation, and clear project outcome copy.
