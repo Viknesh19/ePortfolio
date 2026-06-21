@@ -7,6 +7,8 @@
     <title>Viknesh | Interests</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- THEME INIT (set before paint to avoid flash) -->
+    <script>(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -24,8 +26,8 @@
     <!-- HEADER START -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="index.html" class="nav_logo">
-                V<span>IKNESH</span>
+            <a href="index.html" class="nav_logo" aria-label="Viknesh - Home">
+                <span class="nav_logo-mark">VK</span>
             </a>
             
             <div class="nav_menu" id="nav-menu">
@@ -41,6 +43,10 @@
                     <i class="fa-regular fa-circle-xmark"></i>
                 </div>
             </div>
+
+            <button class="theme_toggle" id="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
 
             <div class="nav_toggle" id="nav-toggle">
                 <i class="fa-solid fa-bars"></i>

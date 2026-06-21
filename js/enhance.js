@@ -238,7 +238,30 @@
     }
   }
 
-  /* ---------- 12. Year auto-update in footer ---------- */
+  /* ---------- 12. Light / dark theme toggle ---------- */
+  function initTheme() {
+    const root = document.documentElement;
+    const btn = document.getElementById('theme-toggle');
+    const apply = (theme) => {
+      root.setAttribute('data-theme', theme);
+      if (btn) {
+        const icon = btn.querySelector('i');
+        if (icon) icon.className = theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        btn.setAttribute('aria-pressed', String(theme === 'light'));
+        btn.title = theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme';
+      }
+    };
+    // honour whatever the no-FOUC head script already set
+    apply(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
+      apply(next);
+    });
+  }
+
+  /* ---------- 13. Year auto-update in footer ---------- */
   function initYear() {
     document.querySelectorAll('[data-year]').forEach((el) => {
       el.textContent = new Date().getFullYear();
@@ -257,6 +280,7 @@
     initVanta();
     initSliderKeys();
     initActiveNav();
+    initTheme();
     initYear();
   });
 })();

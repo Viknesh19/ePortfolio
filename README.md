@@ -30,7 +30,8 @@ Main sections include:
 - Scroll progress bar, soft cursor glow, and reveal-on-scroll animations
 - Animated stat counters, a typewriter rotating-role line, and a looping tech marquee
 - Skill proficiency meters on the interests page and a vertical education timeline
-- Modern glass "command bar" navigation with a pulsing live dot and animated active underline
+- Light / dark theme toggle (remembers your choice, respects system preference, no flash on load)
+- Modern glass "command bar" navigation with a compact "VK" monogram logo and animated active underline
 - Two-column contact section with quick-contact info cards plus the EmailJS form
 - Typography system: Space Grotesk (display) + Sora (body) + JetBrains Mono (code/labels)
 

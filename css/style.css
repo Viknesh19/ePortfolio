@@ -3333,3 +3333,271 @@ body::after{
   position: relative;
   z-index: 1;
 }
+
+/* =====================================================================
+   ============  VK LOGO + MODERN NAV + THEME TOGGLE  ==================
+   ===================================================================== */
+
+/* ---------- VK monogram logo ---------- */
+.nav_logo{ padding-block: .1rem; }
+.nav_logo::before{ content: none; }   /* drop the old pulse dot; the badge is the mark now */
+
+.nav_logo .nav_logo-mark{
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: .7rem;
+  font-family: var(--display-font);
+  font-weight: var(--font-semi-bold);
+  font-size: 1.02rem;
+  line-height: 1;
+  letter-spacing: .04em;
+  color: hsl(220, 45%, 7%);
+  background: linear-gradient(135deg, var(--first-color), var(--accent-color));
+  box-shadow: 0 8px 22px hsla(194, 100%, 42%, .35), inset 0 1px 0 hsla(0, 0%, 100%, .45);
+  transition: transform .28s var(--motion-curve), box-shadow .28s var(--motion-curve);
+}
+
+.nav_logo:hover .nav_logo-mark{
+  transform: translateY(-1px) rotate(-3deg);
+  box-shadow: 0 12px 28px hsla(156, 92%, 45%, .45), inset 0 1px 0 hsla(0, 0%, 100%, .45);
+}
+
+/* ---------- Modern, less-rounded nav (rounded rectangle, not a full pill) ---------- */
+.nav{ border-radius: 1rem; }
+
+@media screen and (max-width: 767px){
+  .nav{ border-radius: .9rem; }
+}
+
+/* ---------- Theme toggle button ---------- */
+.theme_toggle{
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: .7rem;
+  border: 1px solid hsla(0, 0%, 100%, .1);
+  background: hsla(194, 100%, 54%, .08);
+  color: var(--title-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color .25s var(--motion-curve), color .25s var(--motion-curve), transform .25s var(--motion-curve);
+}
+
+.theme_toggle:hover{
+  background: hsla(194, 100%, 54%, .18);
+  color: var(--first-color);
+  transform: translateY(-1px);
+}
+
+/* on mobile, group the theme toggle + hamburger to the right */
+@media screen and (max-width: 1023px){
+  .theme_toggle{ margin-left: auto; margin-right: .4rem; }
+}
+
+/* =====================================================================
+   ============  LIGHT THEME  ==========================================
+   Dark stays the default. Light overrides variables + key surfaces that
+   were hardcoded for a dark background. The terminal/console and image
+   overlays stay dark on purpose.
+   ===================================================================== */
+:root[data-theme="light"]{
+  --first-color: hsl(194, 90%, 36%);
+  --first-color-alt: hsl(156, 70%, 34%);
+  --accent-color: hsl(160, 84%, 30%);
+  --title-color: hsl(222, 47%, 12%);
+  --text-color: hsl(220, 16%, 36%);
+  --body-color: hsl(210, 40%, 97%);
+  --container-color: hsl(210, 38%, 93%);
+  --panel-color: hsla(210, 40%, 100%, .7);
+  --line-color: hsla(205, 55%, 32%, .14);
+  --warning-color: hsl(35, 92%, 45%);
+}
+
+[data-theme="light"] body{
+  background:
+    radial-gradient(circle at 14% 12%, hsla(194, 95%, 55%, .12), transparent 28rem),
+    radial-gradient(circle at 86% 18%, hsla(156, 80%, 50%, .1), transparent 30rem),
+    linear-gradient(160deg, hsl(210, 44%, 98%) 0%, hsl(206, 38%, 95%) 50%, hsl(210, 40%, 97%) 100%);
+}
+
+[data-theme="light"] body::before{
+  background-image:
+    linear-gradient(hsla(205, 60%, 35%, .07) 1px, transparent 1px),
+    linear-gradient(90deg, hsla(205, 60%, 35%, .07) 1px, transparent 1px);
+}
+
+[data-theme="light"] body::after{
+  background:
+    radial-gradient(circle at 15% 20%, hsla(194, 90%, 55%, .14), transparent 24rem),
+    radial-gradient(circle at 86% 9%, hsla(156, 80%, 50%, .12), transparent 26rem),
+    radial-gradient(circle at 50% 100%, hsla(258, 70%, 60%, .07), transparent 30rem);
+}
+
+/* nav */
+[data-theme="light"] .nav{
+  background: linear-gradient(180deg, hsla(210, 55%, 100%, .85), hsla(210, 45%, 98%, .72));
+  border-color: hsla(215, 40%, 30%, .12);
+  box-shadow: 0 12px 40px hsla(215, 40%, 40%, .14), inset 0 1px 0 hsla(0, 0%, 100%, .6);
+}
+
+[data-theme="light"] .blur-header .nav{
+  background: linear-gradient(180deg, hsla(210, 60%, 100%, .94), hsla(210, 48%, 98%, .86));
+  border-color: hsla(215, 45%, 30%, .16);
+}
+
+[data-theme="light"] .nav_link{ color: var(--title-color); }
+
+[data-theme="light"] .theme_toggle,
+[data-theme="light"] .nav_toggle,
+[data-theme="light"] .nav_close{
+  border-color: hsla(215, 40%, 30%, .14);
+  background: hsla(194, 90%, 40%, .1);
+  color: var(--title-color);
+}
+
+[data-theme="light"] .nav_menu{
+  background: linear-gradient(180deg, hsla(210, 55%, 99%, .97), hsla(210, 45%, 96%, .95));
+  border-left-color: hsla(215, 40%, 30%, .12);
+}
+
+/* hero */
+[data-theme="light"] .home_title{
+  background: linear-gradient(180deg, hsl(222, 47%, 16%), hsl(200, 45%, 32%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+[data-theme="light"] .hero_badge,
+[data-theme="light"] .hero_signals span,
+[data-theme="light"] .about_focus span{
+  background: hsla(210, 50%, 100%, .72);
+  border-color: hsla(215, 40%, 30%, .14);
+  color: var(--title-color);
+}
+
+[data-theme="light"] .home_social-link,
+[data-theme="light"] .footer_social-link{
+  background: hsla(194, 90%, 42%, .1);
+  border-color: hsla(194, 80%, 40%, .25);
+  color: var(--title-color);
+}
+
+/* buttons */
+[data-theme="light"] .button{
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 16px 40px hsla(194, 90%, 34%, .28);
+}
+
+[data-theme="light"] .button--ghost{
+  background: hsla(215, 40%, 25%, .06);
+  color: var(--title-color);
+  border-color: hsla(215, 40%, 30%, .16);
+}
+
+[data-theme="light"] .details_link{ color: hsl(0, 0%, 100%); }
+[data-theme="light"] .details_link--ghost{ background: transparent; color: var(--title-color); }
+
+/* generic glass panels */
+[data-theme="light"] .skill_tile,
+[data-theme="light"] .stat_card,
+[data-theme="light"] .info_card,
+[data-theme="light"] .exp_card,
+[data-theme="light"] .edu_card,
+[data-theme="light"] .int_card,
+[data-theme="light"] .expe_card,
+[data-theme="light"] .project_card,
+[data-theme="light"] .journey_card,
+[data-theme="light"] .media_panel,
+[data-theme="light"] .skills_container,
+[data-theme="light"] .contact_container,
+[data-theme="light"] .page_intro,
+[data-theme="light"] .edu_container1,
+[data-theme="light"] .edu_container2,
+[data-theme="light"] .exp1_container,
+[data-theme="light"] .exp2_container,
+[data-theme="light"] .sport_data,
+[data-theme="light"] .interest > .interest_container.container:not(.grid){
+  background: hsla(210, 50%, 100%, .74);
+  border-color: hsla(215, 40%, 30%, .12);
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .6), 0 18px 45px hsla(215, 40%, 40%, .1);
+}
+
+/* remaining section backings */
+[data-theme="light"] .about::before,
+[data-theme="light"] .services::before,
+[data-theme="light"] .edu::before,
+[data-theme="light"] .expe::before,
+[data-theme="light"] .project-details::before{
+  background: hsla(210, 50%, 100%, .55);
+  border-color: hsla(215, 40%, 30%, .1);
+}
+
+/* meters, marquee, pills */
+[data-theme="light"] .meter_bar{
+  background: hsla(215, 30%, 50%, .16);
+  border-color: hsla(215, 40%, 30%, .1);
+}
+
+[data-theme="light"] .tech_marquee{ border-color: hsla(215, 40%, 30%, .12); }
+[data-theme="light"] .marquee_item{ color: var(--title-color); }
+
+/* project details extras */
+[data-theme="light"] .project_meta{
+  background: hsla(210, 50%, 100%, .65);
+  border-color: hsla(215, 40%, 30%, .12);
+}
+
+[data-theme="light"] .project_tags span{
+  background: hsla(194, 85%, 45%, .14);
+  color: var(--title-color);
+}
+
+[data-theme="light"] .project_nav{
+  background: hsla(210, 50%, 100%, .85);
+  color: var(--title-color);
+  border: 1px solid hsla(215, 40%, 30%, .12);
+}
+
+/* timeline marker */
+[data-theme="light"] .journey_marker{
+  background: hsla(210, 50%, 100%, .96);
+  color: var(--first-color);
+  border-color: hsla(194, 80%, 40%, .4);
+}
+
+/* contact inputs */
+[data-theme="light"] .contact_input,
+[data-theme="light"] .contact_layout .contact_input{
+  background-color: hsla(210, 50%, 100%, .85);
+  border-color: hsla(215, 40%, 30%, .16);
+  color: var(--title-color);
+}
+
+[data-theme="light"] .contact_input::placeholder{ color: hsla(220, 16%, 42%, .85); }
+
+/* footer + scroll up */
+[data-theme="light"] .footer{
+  background: hsla(210, 45%, 95%, .85);
+  border-top-color: hsla(215, 40%, 30%, .12);
+}
+
+[data-theme="light"] .scrollup{
+  background-color: hsl(210, 45%, 99%);
+  color: var(--first-color);
+  box-shadow: 0 4px 14px hsla(215, 30%, 40%, .25);
+}
+
+/* cursor glow reads better with multiply on a light canvas */
+[data-theme="light"] .cursor_glow{
+  mix-blend-mode: multiply;
+  background: radial-gradient(circle, hsla(194, 90%, 45%, .4), hsla(194, 90%, 45%, 0) 70%);
+}
+
+[data-theme="light"] .cursor_glow--active{
+  background: radial-gradient(circle, hsla(156, 80%, 40%, .42), hsla(194, 90%, 45%, 0) 70%);
+}
