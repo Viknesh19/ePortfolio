@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viknesh | e-Portfolio</title> 
+    <meta name="description" content="Vikneshwaran Murugaian - Information Technology graduate skilled in software development, data analytics, web and mobile apps, and IT operations.">
+    <title>Viknesh | e-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -19,6 +22,7 @@
     <script src="https://kit.fontawesome.com/a542e384bc.js" crossorigin="anonymous"></script>  
 </head>
 <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
     <div class="site_backdrop" aria-hidden="true">
         <span class="backdrop_grid"></span>
         <span class="backdrop_beam backdrop_beam--one"></span>
@@ -58,6 +62,7 @@
     <main class="main">
         <!-- HOME -->
         <section class="home section" id="home">
+            <div class="hero_canvas" id="vanta-hero" aria-hidden="true"></div>
             <div class="home_container container grid">
                 <div class="home_content">
                     <div class="home_data">
@@ -68,6 +73,7 @@
                         <h3 class="home_subtitle">Hello, <span>I'm</span></h3>
                         <h1 class="home_title">VIKNESHWARAN</h1>
                         <h3 class="home_education">Information Technology Graduate</h3>
+                        <p class="home_typed">Building <span class="type_text" data-typing='["software systems","data dashboards","web &amp; mobile apps","IT solutions"]'>software systems</span><span class="type_caret">|</span></p>
                         <p class="home_description">
                             Bachelor of Information Technology graduate with hands-on experience in software development, data analysis, and IT operations. Skilled in Python, SQL, web and mobile development, and data visualization, with project-based and internship experience.
                         </p>
@@ -121,6 +127,56 @@
             </div>
         </section>
 
+        <!-- STATS + TECH MARQUEE -->
+        <section class="stats section" aria-label="Highlights at a glance">
+            <div class="stats_container container">
+                <div class="stats_grid">
+                    <div class="stat_card" data-reveal>
+                        <span class="stat_num" data-count="6" data-suffix="+">0</span>
+                        <span class="stat_label">Projects delivered</span>
+                    </div>
+                    <div class="stat_card" data-reveal data-reveal-delay="80">
+                        <span class="stat_num" data-count="10" data-suffix="+">0</span>
+                        <span class="stat_label">Tools &amp; technologies</span>
+                    </div>
+                    <div class="stat_card" data-reveal data-reveal-delay="160">
+                        <span class="stat_num" data-count="1">0</span>
+                        <span class="stat_label">Silver medal (ICE-CInno)</span>
+                    </div>
+                    <div class="stat_card" data-reveal data-reveal-delay="240">
+                        <span class="stat_num" data-count="3">0</span>
+                        <span class="stat_label">Languages spoken</span>
+                    </div>
+                </div>
+
+                <div class="tech_marquee" aria-hidden="true">
+                    <div class="marquee_track">
+                        <span class="marquee_item"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="marquee_item"><i class="fa-solid fa-database"></i> SQL</span>
+                        <span class="marquee_item"><i class="fa-solid fa-flask"></i> Flask</span>
+                        <span class="marquee_item"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="marquee_item"><i class="fa-solid fa-mobile-screen-button"></i> Flutter</span>
+                        <span class="marquee_item"><i class="fa-solid fa-chart-pie"></i> Pandas</span>
+                        <span class="marquee_item"><i class="fa-solid fa-hashtag"></i> C#</span>
+                        <span class="marquee_item"><i class="fa-brands fa-html5"></i> HTML5</span>
+                        <span class="marquee_item"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                        <span class="marquee_item"><i class="fa-brands fa-git-alt"></i> Git</span>
+                        <!-- duplicate set for seamless loop -->
+                        <span class="marquee_item"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="marquee_item"><i class="fa-solid fa-database"></i> SQL</span>
+                        <span class="marquee_item"><i class="fa-solid fa-flask"></i> Flask</span>
+                        <span class="marquee_item"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="marquee_item"><i class="fa-solid fa-mobile-screen-button"></i> Flutter</span>
+                        <span class="marquee_item"><i class="fa-solid fa-chart-pie"></i> Pandas</span>
+                        <span class="marquee_item"><i class="fa-solid fa-hashtag"></i> C#</span>
+                        <span class="marquee_item"><i class="fa-brands fa-html5"></i> HTML5</span>
+                        <span class="marquee_item"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                        <span class="marquee_item"><i class="fa-brands fa-git-alt"></i> Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ABOUT -->
         <section class="about section" id="about">
             <div class="about_container container grid">
@@ -141,7 +197,7 @@
                 </div>
 
                 <div class="about_image">
-                    <div class="media_panel media_panel--portrait">
+                    <div class="media_panel media_panel--portrait" data-tilt>
                         <img src="img/profile_pic.png" alt="Vikneshwaran profile portrait" loading="lazy">
                         <div class="media_panel-caption">
                             <span>Profile</span>
@@ -167,22 +223,22 @@
                     <a href="interest.html" class="button">View Interests</a>
                 </div>
                 <div class="skills_content">
-                    <article class="skill_tile">
+                    <article class="skill_tile" data-tilt>
                         <i class="fa-solid fa-window-restore"></i>
                         <h3>Web Systems</h3>
                         <p>Responsive HTML, CSS, JavaScript, Flask, and REST workflows.</p>
                     </article>
-                    <article class="skill_tile">
+                    <article class="skill_tile" data-tilt>
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         <h3>Mobile Apps</h3>
                         <p>Flutter and Ionic experience with clean user journeys.</p>
                     </article>
-                    <article class="skill_tile">
+                    <article class="skill_tile" data-tilt>
                         <i class="fa-solid fa-chart-pie"></i>
                         <h3>Data Analytics</h3>
                         <p>Python, Pandas, SQL, Matplotlib, cleaning, and dashboards.</p>
                     </article>
-                    <article class="skill_tile">
+                    <article class="skill_tile" data-tilt>
                         <i class="fa-solid fa-headset"></i>
                         <h3>IT Support</h3>
                         <p>Account setup, troubleshooting, documentation, and system support.</p>
@@ -230,7 +286,7 @@
 
             <div class="edu_container container grid">
                 
-                <article class="edu_card">
+                <article class="edu_card" data-tilt>
                     <img class="edu_img" src="img/project img/cartip.png" alt="Mobile app project" loading="lazy">
                     <div class="modal">
                         <span class="edu_subtitle"><i class="fa-solid fa-car exp_icon"></i></span>
@@ -239,7 +295,7 @@
                     </div>
                 </article>
                 
-                <article class="edu_card">
+                <article class="edu_card" data-tilt>
                     <img class="edu_img" src="img/project img/lily.png" alt="Web-based game" loading="lazy">
                     <div class="modal">
                         <span class="edu_subtitle"><i class="fa-solid fa-gamepad exp_icon"></i></span>
@@ -248,7 +304,7 @@
                     </div>
                 </article>
 
-                <article class="edu_card">
+                <article class="edu_card" data-tilt>
                     <img class="edu_img" src="img/project img/dashboard.png" alt="Data analysis project" loading="lazy">
                     <div class="modal">
                         <span class="edu_subtitle"><i class="fa-solid fa-chart-line exp_icon"></i></span>
@@ -257,7 +313,7 @@
                     </div>
                 </article>
                 
-                <article class="edu_card">
+                <article class="edu_card" data-tilt>
                     <img class="edu_img" src="img/project img/pne it.png" alt="Internship systems" loading="lazy">
                     <div class="modal">
                         <span class="edu_subtitle"><i class="fa-solid fa-briefcase exp_icon"></i></span>
@@ -266,7 +322,7 @@
                     </div>
                 </article>
 
-                <article class="edu_card">
+                <article class="edu_card" data-tilt>
                     <img class="edu_img" src="img/project img/pne label.png" alt="Automation project" loading="lazy">
                     <div class="modal">
                         <span class="edu_subtitle"><i class="fa-solid fa-tags exp_icon"></i></span>
@@ -275,7 +331,7 @@
                     </div>
                 </article>
                 
-                <article class="edu_card">
+                <article class="edu_card" data-tilt>
                     <img class="edu_img" src="img/project img/parttime.png" alt="Community involvement" loading="lazy">
                     <div class="modal">
                         <span class="edu_subtitle"><i class="fa-solid fa-people-group exp_icon"></i></span>
@@ -297,20 +353,53 @@
                 Contact Me
             </h3>
 
-            <div class="contact_container container grid">
-                <form action="" class="contact_form" id="contact-form">
-                    <div class="contact_group">
-                        <label class="sr_only" for="user-name">Your name</label>
-                        <input class="contact_input" id="user-name" type="text" name="user_name" placeholder="Your name" required>
-                        <label class="sr_only" for="user-email">Your email</label>
-                        <input class="contact_input" id="user-email" type="email" name="user_email" placeholder="Your email" required>
+            <div class="contact_container container">
+                <div class="contact_layout">
+                    <div class="contact_info">
+                        <a class="info_card" href="mailto:viknesh1119@gmail.com" data-reveal>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="info_card-text">
+                                <span>Email</span>
+                                <strong>viknesh1119@gmail.com</strong>
+                            </span>
+                        </a>
+                        <div class="info_card" data-reveal data-reveal-delay="80">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="info_card-text">
+                                <span>Location</span>
+                                <strong>Johor Bahru, Malaysia</strong>
+                            </span>
+                        </div>
+                        <a class="info_card" href="https://www.linkedin.com/in/vikneshwaran-murugaian-62281a359/" target="_blank" rel="noopener" data-reveal data-reveal-delay="160">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span class="info_card-text">
+                                <span>LinkedIn</span>
+                                <strong>Vikneshwaran Murugaian</strong>
+                            </span>
+                        </a>
+                        <a class="info_card" href="https://github.com/Viknesh19" target="_blank" rel="noopener" data-reveal data-reveal-delay="240">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="info_card-text">
+                                <span>GitHub</span>
+                                <strong>@Viknesh19</strong>
+                            </span>
+                        </a>
                     </div>
 
-                    <label class="sr_only" for="user-request">Your message</label>
-                    <textarea class="contact_input" id="user-request" name="user_request" placeholder="Your message" required></textarea>
-                    <p class="contact_message" id="contact-message"></p>
-                    <button type="submit" class="button contact_button">Send Message</button>
-                </form>
+                    <form action="" class="contact_form" id="contact-form">
+                        <div class="contact_group">
+                            <label class="sr_only" for="user-name">Your name</label>
+                            <input class="contact_input" id="user-name" type="text" name="user_name" placeholder="Your name" required>
+                            <label class="sr_only" for="user-email">Your email</label>
+                            <input class="contact_input" id="user-email" type="email" name="user_email" placeholder="Your email" required>
+                        </div>
+
+                        <label class="sr_only" for="user-request">Your message</label>
+                        <textarea class="contact_input" id="user-request" name="user_request" placeholder="Your message" required></textarea>
+                        <p class="contact_message" id="contact-message"></p>
+                        <button type="submit" class="button contact_button" data-magnetic>Send Message</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -335,7 +424,7 @@
             </div>
 
             <span class="footer_copy">
-                <i class="fa-solid fa-copyright"></i> 2022 Copyright by Viknesh. 
+                <i class="fa-solid fa-copyright"></i> <span data-year>2026</span> Vikneshwaran Murugaian &middot; Built &amp; designed with care.
             </span>
         </div>
     </footer>
@@ -351,9 +440,16 @@
 
     <!-- EMAIL JS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- 3D + TILT (CDN, progressively enhanced) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
     <script src="js/email.js"></script>
+    <script src="js/enhance.js"></script>
 
 </body>
 </html>

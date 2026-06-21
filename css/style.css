@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 /* css */
 :root{
@@ -32,7 +32,8 @@
     /* Font and typography */
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: "Sora", sans-serif;
-    --mono-font: "Consolas", "Courier New", monospace;
+    --display-font: "Space Grotesk", "Sora", sans-serif;
+    --mono-font: "JetBrains Mono", "Consolas", "Courier New", monospace;
     --biggest-font-size: 2rem;
     --bigger-font-size: 1.25rem;
     --h1-font-size: 1.5rem;
@@ -2611,4 +2612,724 @@ body::after{
   .project_img{
     min-height: 14rem;
   }
+}
+
+/* =====================================================================
+   ============  PREMIUM 2026 UPGRADE PASS (3D + MOTION + TYPE)  ========
+   Appended last so it wins the cascade. Everything below is additive.
+   ===================================================================== */
+
+/* ---------- Typography system ---------- */
+.home_title,
+.section_title,
+.page_title,
+.nav_logo,
+.footer_title,
+.exp_title,
+.edu_title,
+.int_title,
+.project_title,
+.expe_title,
+.journey_title,
+.stat_num{
+  font-family: var(--display-font);
+  letter-spacing: -0.02em;
+}
+
+.home_title{
+  letter-spacing: -0.03em;
+  background: linear-gradient(180deg, hsl(210, 40%, 98%) 0%, hsl(200, 30%, 78%) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.section_subtitle,
+.project_tagline,
+.project_role,
+.project_meta-label,
+.page_kicker{
+  font-family: var(--mono-font);
+  letter-spacing: .06em;
+}
+
+::selection{
+  background: hsla(194, 100%, 60%, .28);
+  color: hsl(210, 40%, 98%);
+}
+
+/* ---------- Scroll progress bar ---------- */
+#scroll-progress{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--first-color), var(--accent-color), var(--first-color));
+  box-shadow: 0 0 14px hsla(194, 100%, 60%, .6);
+  z-index: calc(var(--z-fixed) + 5);
+  will-change: transform;
+}
+
+/* ---------- Custom cursor glow ---------- */
+.cursor_glow{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: calc(var(--z-fixed) + 4);
+  background: radial-gradient(circle, hsla(194, 100%, 65%, .55), hsla(194, 100%, 65%, 0) 70%);
+  mix-blend-mode: screen;
+  transition: width .25s var(--motion-curve), height .25s var(--motion-curve), background-color .25s;
+  will-change: transform;
+}
+
+.cursor_glow--active{
+  width: 64px;
+  height: 64px;
+  background: radial-gradient(circle, hsla(156, 92%, 60%, .5), hsla(194, 100%, 65%, 0) 70%);
+}
+
+/* ---------- Reveal on scroll ---------- */
+[data-reveal]{
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .7s var(--motion-curve), transform .7s var(--motion-curve);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible{
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Vanilla-tilt glare cleanup ---------- */
+[data-tilt]{
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.js-tilt-glare{
+  border-radius: inherit;
+}
+
+/* ---------- Button shine sweep ---------- */
+.button,
+.details_link{
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.button::after,
+.details_link::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent, hsla(0, 0%, 100%, .35), transparent);
+  transform: skewX(-18deg);
+  transition: left .55s var(--motion-curve);
+  z-index: 1;
+}
+
+.button:hover::after,
+.details_link:hover::after{
+  left: 140%;
+}
+
+/* ---------- Hero 3D background ---------- */
+.home_container{
+  position: relative;
+  z-index: 1;
+}
+
+.hero_canvas{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: .55;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(120% 90% at 70% 35%, #000 38%, transparent 82%);
+  mask-image: radial-gradient(120% 90% at 70% 35%, #000 38%, transparent 82%);
+}
+
+/* allow hover/mouse interaction with the net on large screens */
+@media (hover: hover) and (pointer: fine){
+  .hero_canvas{ pointer-events: auto; }
+  .home_content,
+  .home_image{ position: relative; z-index: 2; }
+}
+
+/* ---------- Hero typed role line ---------- */
+.home_typed{
+  display: inline-flex;
+  align-items: center;
+  gap: .15rem;
+  margin-top: .35rem;
+  font-family: var(--mono-font);
+  font-size: var(--h3-font-size);
+  color: var(--text-color);
+}
+
+.home_typed .type_text{
+  color: var(--accent-color);
+  font-weight: var(--font-medium);
+}
+
+.type_caret{
+  display: inline-block;
+  width: .6ch;
+  color: var(--first-color);
+  animation: caretBlink 1s steps(1) infinite;
+}
+
+@keyframes caretBlink{
+  50%{ opacity: 0; }
+}
+
+/* ---------- Stats band + tech marquee ---------- */
+.stats{
+  padding-block: 1rem 3rem;
+}
+
+.stats_container{
+  display: grid;
+  gap: 2rem;
+}
+
+.stats_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat_card{
+  padding: 1.4rem 1.1rem;
+  border-radius: 1.1rem;
+  text-align: center;
+  border: 1px solid hsla(0, 0%, 100%, .08);
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, .06), hsla(0, 0%, 100%, .02));
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .06);
+  transition: transform .24s var(--motion-curve), border-color .24s var(--motion-curve);
+}
+
+.stat_card:hover{
+  transform: translateY(-4px);
+  border-color: hsla(194, 100%, 68%, .34);
+}
+
+.stat_num{
+  display: block;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: var(--font-semi-bold);
+  line-height: 1;
+  background: linear-gradient(135deg, var(--first-color), var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.stat_label{
+  display: block;
+  margin-top: .55rem;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.tech_marquee{
+  position: relative;
+  overflow: hidden;
+  padding: .9rem 0;
+  border-block: 1px solid hsla(0, 0%, 100%, .08);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.marquee_track{
+  display: flex;
+  width: max-content;
+  gap: 2.5rem;
+  animation: marquee 28s linear infinite;
+}
+
+.tech_marquee:hover .marquee_track{
+  animation-play-state: paused;
+}
+
+.marquee_item{
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  color: var(--title-color);
+  font-family: var(--mono-font);
+  font-size: var(--small-font-size);
+  white-space: nowrap;
+}
+
+.marquee_item i{
+  color: var(--first-color);
+  font-size: 1.1rem;
+}
+
+@keyframes marquee{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+/* ---------- Contact: info + form layout ---------- */
+.contact_layout{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact_info{
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.info_card{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid hsla(0, 0%, 100%, .08);
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, .055), hsla(0, 0%, 100%, .02));
+  color: var(--title-color);
+  transition: transform .24s var(--motion-curve), border-color .24s var(--motion-curve);
+}
+
+.info_card:hover{
+  transform: translateY(-3px);
+  border-color: hsla(194, 100%, 68%, .34);
+}
+
+.info_card i{
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: .8rem;
+  font-size: 1.2rem;
+  color: var(--first-color);
+  background: hsla(194, 100%, 54%, .1);
+  border: 1px solid hsla(194, 100%, 70%, .2);
+}
+
+.info_card-text{ display: block; }
+
+.info_card-text span{
+  display: block;
+  font-size: var(--smaller-font-size);
+  color: var(--accent-color);
+  font-family: var(--mono-font);
+}
+
+.info_card-text strong{
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  word-break: break-word;
+}
+
+/* ---------- Skill proficiency meters (interests) ---------- */
+.skillbars{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.meter{
+  display: grid;
+  gap: .5rem;
+}
+
+.meter_head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+}
+
+.meter_head span:first-child{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: var(--font-medium);
+}
+
+.meter_head i{ color: var(--first-color); }
+
+.meter_head .meter_val{
+  font-family: var(--mono-font);
+  color: var(--accent-color);
+}
+
+.meter_bar{
+  position: relative;
+  height: 9px;
+  border-radius: 999px;
+  background: hsla(0, 0%, 100%, .07);
+  overflow: hidden;
+  border: 1px solid hsla(0, 0%, 100%, .06);
+}
+
+.meter_fill{
+  position: absolute;
+  inset: 0 100% 0 0;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--first-color), var(--accent-color));
+  box-shadow: 0 0 14px hsla(194, 100%, 60%, .45);
+  transition: width 1.3s var(--motion-curve);
+}
+
+/* ---------- Education journey timeline ---------- */
+.journey{
+  position: relative;
+}
+
+.journey_track{
+  position: relative;
+  width: min(100% - 2rem, 1000px);
+  margin-inline: auto;
+  display: grid;
+  gap: 1.75rem;
+  padding-left: 0;
+}
+
+.journey_track::before{
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: .5rem;
+  bottom: .5rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--first-color), hsla(194, 100%, 60%, .12) 92%, transparent);
+}
+
+.journey_item{
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: start;
+}
+
+.journey_marker{
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--first-color);
+  background: hsla(220, 34%, 8%, .95);
+  border: 1px solid hsla(194, 100%, 70%, .35);
+  box-shadow: 0 0 22px hsla(194, 100%, 54%, .28);
+  font-size: 1.1rem;
+  z-index: 1;
+}
+
+.journey_card{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.4rem;
+  border-radius: 1.15rem;
+  border: 1px solid hsla(0, 0%, 100%, .08);
+  background: linear-gradient(135deg, hsla(0, 0%, 100%, .065), hsla(0, 0%, 100%, .02));
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .06);
+  transition: transform .24s var(--motion-curve), border-color .24s var(--motion-curve);
+}
+
+.journey_card:hover{
+  border-color: hsla(194, 100%, 68%, .32);
+}
+
+.journey_year{
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  gap: .4rem;
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  font-family: var(--mono-font);
+  font-size: var(--smaller-font-size);
+  color: var(--accent-color);
+  background: hsla(156, 92%, 52%, .1);
+  border: 1px solid hsla(156, 92%, 60%, .22);
+}
+
+.journey_title{
+  font-size: var(--h2-font-size);
+  margin-top: .1rem;
+}
+
+.journey_org{
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.journey_desc{
+  color: var(--text-color);
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+.journey_card.has-media{
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px){
+  .journey_card.has-media{
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    align-items: center;
+  }
+}
+
+/* ---------- Section heading accent rule under titles ---------- */
+.stats .section_title::after,
+.contact .section_title::after{
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: .9rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--first-color), var(--accent-color));
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (min-width: 576px){
+  .skillbars{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (min-width: 768px){
+  .stats_grid{ grid-template-columns: repeat(4, 1fr); }
+}
+
+@media screen and (min-width: 1024px){
+  .contact_layout{
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .hero_canvas{ display: none; }
+
+  .journey_item{
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: .85rem;
+  }
+
+  .journey_marker{ width: 38px; height: 38px; font-size: 1rem; }
+
+  .journey_track::before{ left: 18px; }
+
+  .journey_card{ padding: 1.1rem; }
+}
+
+/* ---------- Reduced motion: kill the heavy stuff ---------- */
+@media (prefers-reduced-motion: reduce){
+  .marquee_track{ animation: none; }
+  .type_caret{ animation: none; }
+  .cursor_glow{ display: none; }
+  .button::after,
+  .details_link::after{ display: none; }
+  [data-reveal]{ opacity: 1; transform: none; }
+}
+
+/* =====================================================================
+   ============  CONTAINMENT FIX + MODERN NAV (follow-up pass)  =========
+   ===================================================================== */
+
+/* ---------- Contact: one real contained panel (no stray section box) ---------- */
+.contact::before{ content: none; }
+
+.contact .section_subtitle,
+.contact .section_title{
+  position: relative;
+  z-index: 1;
+}
+
+.contact_container{
+  width: min(100% - 2rem, 1180px);
+  margin-inline: auto;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  border: 1px solid hsla(0, 0%, 100%, .08);
+  border-radius: 1.4rem;
+  background:
+    linear-gradient(135deg, hsla(0, 0%, 100%, .05), hsla(0, 0%, 100%, .018)),
+    radial-gradient(circle at 92% 0%, hsla(194, 100%, 54%, .09), transparent 24rem);
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .06), 0 30px 80px hsla(220, 60%, 2%, .35);
+}
+
+/* the form already has its own panel styling; flatten it inside the new container
+   so we never get a card-inside-a-card-inside-a-card look */
+.contact_layout .contact_form{
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.contact_layout .contact_input{
+  background-color: hsla(220, 34%, 8%, .6);
+}
+
+@media screen and (min-width: 1152px){
+  /* neutralise the old single-column grid sizing now that we use contact_layout */
+  .contact_container{ padding-block: clamp(1.25rem, 3vw, 2.25rem); }
+}
+
+/* ---------- Navbar: modern, clean, tech command bar ---------- */
+.header{
+  padding-top: 1rem;
+}
+
+.nav{
+  border: 1px solid hsla(194, 100%, 72%, .16);
+  background: linear-gradient(180deg, hsla(220, 38%, 11%, .82), hsla(222, 42%, 7%, .78));
+  box-shadow: 0 12px 40px hsla(222, 60%, 2%, .5), inset 0 1px 0 hsla(0, 0%, 100%, .06);
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  padding-inline: 1.15rem 1.25rem;
+  transition: background-color .3s var(--motion-curve), border-color .3s var(--motion-curve), box-shadow .3s var(--motion-curve);
+}
+
+.blur-header .nav{
+  background: linear-gradient(180deg, hsla(220, 40%, 9%, .94), hsla(222, 44%, 6%, .9));
+  border-color: hsla(194, 100%, 72%, .28);
+  box-shadow: 0 16px 50px hsla(222, 70%, 1%, .6), inset 0 1px 0 hsla(0, 0%, 100%, .07);
+}
+
+.nav_logo{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--display-font);
+  letter-spacing: .02em;
+}
+
+.nav_logo::before{
+  content: "";
+  width: .5rem;
+  height: .5rem;
+  margin-right: .55rem;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 0 0 hsla(156, 92%, 52%, .55);
+  animation: navPulse 2.4s var(--motion-curve) infinite;
+}
+
+@keyframes navPulse{
+  0%{ box-shadow: 0 0 0 0 hsla(156, 92%, 52%, .55); }
+  70%{ box-shadow: 0 0 0 .5rem hsla(156, 92%, 52%, 0); }
+  100%{ box-shadow: 0 0 0 0 hsla(156, 92%, 52%, 0); }
+}
+
+.nav_link{
+  position: relative;
+  font-weight: var(--font-medium);
+  padding-block: .2rem;
+  transition: color .25s var(--motion-curve);
+}
+
+.nav_link::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -.4rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--first-color), var(--accent-color));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .28s var(--motion-curve);
+}
+
+.nav_link:hover::after,
+.nav_link.active::after{
+  transform: scaleX(1);
+}
+
+.nav_link.active{
+  color: var(--first-color);
+}
+
+/* NOTE: do NOT set `display` here - the base rule (flex) and the desktop
+   `display:none` media query must keep controlling visibility. We only
+   restyle these as buttons; centering uses the inherited flexbox. */
+.nav_toggle,
+.nav_close{
+  width: 2.4rem;
+  height: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: .7rem;
+  border: 1px solid hsla(0, 0%, 100%, .08);
+  background: hsla(194, 100%, 54%, .08);
+  transition: background-color .25s var(--motion-curve), color .25s var(--motion-curve);
+}
+
+.nav_toggle:hover,
+.nav_close:hover{
+  background: hsla(194, 100%, 54%, .18);
+  color: var(--first-color);
+}
+
+@media screen and (max-width: 1023px){
+  .nav_menu{
+    background: linear-gradient(180deg, hsla(220, 42%, 9%, .92), hsla(222, 46%, 6%, .9));
+    border-left: 1px solid hsla(194, 100%, 72%, .16);
+  }
+
+  .nav_link::after{
+    left: 0;
+    right: auto;
+    width: 1.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .nav_logo::before{ animation: none; }
+}
+
+/* Bulletproof: the mobile toggle/close must never appear on desktop, no matter
+   what later rules touch these elements. */
+@media screen and (min-width: 1024px){
+  .nav_toggle,
+  .nav_close{
+    display: none !important;
+  }
+}
+
+/* ---------- Remove duplicated section backing where a real inner panel
+   already exists (prevents the box-inside-a-box look). ---------- */
+.skills::before,
+.interest::before{
+  content: none;
+}
+
+/* keep these sections' real inner panels doing the containment work */
+.skills_container,
+.interest > .interest_container.container:not(.grid){
+  position: relative;
+  z-index: 1;
 }

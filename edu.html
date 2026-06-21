@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viknesh | Certifications &amp; Education</title> 
+    <meta name="description" content="Vikneshwaran's education timeline: primary, secondary (STPM), Bachelor of Information Technology at Raffles University, and ICE-CInno 2024 Silver Medal.">
+    <title>Viknesh | Certifications &amp; Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -16,6 +19,7 @@
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/a542e384bc.js" crossorigin="anonymous"></script></head>
 <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
     <!-- HEADER START -->
     <header class="header" id="header">
         <nav class="nav container">
@@ -45,85 +49,98 @@
     <!-- HEADER END -->
     
     <main class="main">
-        <section class="edu2 section page_surface">
+        <section class="journey section page_surface">
             <div class="page_intro container">
                 <span class="page_kicker"><i class="fa-solid fa-graduation-cap"></i> Academic foundation</span>
                 <h1 class="page_title">Education, certification, and achievement milestones.</h1>
                 <p class="page_description">A concise path from core academics to a Bachelor of Information Technology and an innovation award.</p>
             </div>
-        </section>
 
-        <section class="edu section" id="primary">
-            <div class="edu_container1 container grid">
-                <div class="edu_data">
-                    <h3 class="section_subtitle">SJK(T) Taman Tun Aminah</h3>
-                    <h2 class="section_title">Primary Education</h2>
-                    <p class="edu_description">Completed primary education with a strong foundation in core subjects and teamwork activities.</p>
-                </div>
-                <div class="edu_image">
-                    <div class="media_panel">
-                        <img src="img/edu/primary.jpg" alt="SJKT Taman Tun Aminah school building" loading="lazy">
-                        <div class="media_panel-caption">
-                            <span>Primary</span>
-                            <strong>SJKT Taman Tun Aminah</strong>
+            <ol class="journey_track">
+                <li class="journey_item" id="primary" data-reveal>
+                    <span class="journey_marker"><i class="fa-solid fa-chalkboard"></i></span>
+                    <article class="journey_card has-media">
+                        <div class="journey_body">
+                            <span class="journey_year"><i class="fa-regular fa-calendar"></i> Foundation years</span>
+                            <h2 class="journey_title">Primary Education</h2>
+                            <p class="journey_org">SJK(T) Taman Tun Aminah</p>
+                            <p class="journey_desc">Built a strong foundation in core subjects, discipline, and teamwork activities that shaped an early interest in problem-solving.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="edu2 section" id="secondary">
-            <div class="edu_container2 container grid">
-                <div class="edu2_data">
-                    <h3 class="section_subtitle">Maktab Sultan Abu Bakar (MSAB) / English College (EC)</h3>
-                    <h2 class="section_title">Secondary Education</h2>
-                    <p class="edu2_description">Completed STPM (2020 - 2022), focusing on analytical thinking and academic discipline.</p>
-                </div>
-                <div class="edu2_image">
-                    <div class="media_panel">
-                        <img src="img/edu/secondary.jpg" alt="Maktab Sultan Abu Bakar school building" loading="lazy">
-                        <div class="media_panel-caption">
-                            <span>Secondary</span>
-                            <strong>MSAB / English College</strong>
+                        <div class="journey_media">
+                            <div class="media_panel" data-tilt>
+                                <img src="img/edu/primary.jpg" alt="SJKT Taman Tun Aminah school building" loading="lazy">
+                                <div class="media_panel-caption">
+                                    <span>Primary</span>
+                                    <strong>SJKT Taman Tun Aminah</strong>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="edu section" id="uni">
-            <div class="edu_container1 container grid">
-                <div class="edu_data">
-                    <h3 class="section_subtitle">Raffles University</h3>
-                    <h2 class="section_title">Higher Education</h2>
-                    <p class="edu_description">Bachelor of Information Technology (BIT), Sept 2022 - Aug 2025. Focused on software development, data analytics, and web technologies.</p>
-                </div>
-                <div class="edu_image">
-                    <div class="media_panel">
-                        <img src="img/edu/uni.jpg" alt="Raffles University campus" loading="lazy">
-                        <div class="media_panel-caption">
-                            <span>Degree</span>
-                            <strong>Raffles University</strong>
+                    </article>
+                </li>
+
+                <li class="journey_item" id="secondary" data-reveal data-reveal-delay="60">
+                    <span class="journey_marker"><i class="fa-solid fa-school-flag"></i></span>
+                    <article class="journey_card has-media">
+                        <div class="journey_body">
+                            <span class="journey_year"><i class="fa-regular fa-calendar"></i> 2020 - 2022</span>
+                            <h2 class="journey_title">Secondary Education (STPM)</h2>
+                            <p class="journey_org">Maktab Sultan Abu Bakar (MSAB) / English College</p>
+                            <p class="journey_desc">Completed STPM with a focus on analytical thinking and academic discipline, preparing for a technical degree path.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="edu2 section" id="achievement">
-            <div class="edu_container2 container grid">
-                <div class="edu2_data">
-                    <h3 class="section_subtitle">Achievement</h3>
-                    <h2 class="section_title">ICE-CInno 2024</h2>
-                    <p class="edu2_description">Silver Medal at the International Competition and Exhibition on Computing Innovation 2024 for the Virtual Car Customizer &amp; Maintenance Tracker project.</p>
-                </div>
-                <div class="edu2_image">
-                    <div class="media_panel">
-                        <img src="img/edu/ice-cinno.png" alt="ICE-CInno 2024 silver medal achievement" loading="lazy">
-                        <div class="media_panel-caption">
-                            <span>Award</span>
-                            <strong>ICE-CInno 2024 Silver</strong>
+                        <div class="journey_media">
+                            <div class="media_panel" data-tilt>
+                                <img src="img/edu/secondary.jpg" alt="Maktab Sultan Abu Bakar school building" loading="lazy">
+                                <div class="media_panel-caption">
+                                    <span>Secondary</span>
+                                    <strong>MSAB / English College</strong>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </article>
+                </li>
+
+                <li class="journey_item" id="uni" data-reveal data-reveal-delay="120">
+                    <span class="journey_marker"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <article class="journey_card has-media">
+                        <div class="journey_body">
+                            <span class="journey_year"><i class="fa-regular fa-calendar"></i> Sept 2022 - Aug 2025</span>
+                            <h2 class="journey_title">Bachelor of Information Technology</h2>
+                            <p class="journey_org">Raffles University</p>
+                            <p class="journey_desc">Focused on software development, data analytics, and web technologies, delivering project-based work across the full stack.</p>
+                        </div>
+                        <div class="journey_media">
+                            <div class="media_panel" data-tilt>
+                                <img src="img/edu/uni.jpg" alt="Raffles University campus" loading="lazy">
+                                <div class="media_panel-caption">
+                                    <span>Degree</span>
+                                    <strong>Raffles University</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="journey_item" id="achievement" data-reveal data-reveal-delay="180">
+                    <span class="journey_marker"><i class="fa-solid fa-medal"></i></span>
+                    <article class="journey_card has-media">
+                        <div class="journey_body">
+                            <span class="journey_year"><i class="fa-solid fa-award"></i> 2024 &middot; Silver Medal</span>
+                            <h2 class="journey_title">ICE-CInno 2024</h2>
+                            <p class="journey_org">International Competition &amp; Exhibition on Computing Innovation</p>
+                            <p class="journey_desc">Silver Medal for the Virtual Car Customizer &amp; Maintenance Tracker - a mobile app with 3D preview and an AI chatbot.</p>
+                        </div>
+                        <div class="journey_media">
+                            <div class="media_panel" data-tilt>
+                                <img src="img/edu/ice-cinno.png" alt="ICE-CInno 2024 silver medal achievement" loading="lazy">
+                                <div class="media_panel-caption">
+                                    <span>Award</span>
+                                    <strong>ICE-CInno 2024 Silver</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ol>
         </section>
     </main>
 
@@ -146,7 +163,7 @@
             </div>
 
             <span class="footer_copy">
-                <i class="fa-solid fa-copyright"></i> 2022 Copyright by Viknesh. 
+                <i class="fa-solid fa-copyright"></i> <span data-year>2026</span> Vikneshwaran Murugaian &middot; Built &amp; designed with care.
             </span>
         </div>
     </footer>
@@ -160,7 +177,11 @@
     <!-- SCROLLREVEAL -->
     <script src="js/scrollreveal.min.js"></script>
 
+    <!-- TILT (CDN, progressively enhanced) -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
+    <script src="js/enhance.js"></script>
 </body>
 </html>

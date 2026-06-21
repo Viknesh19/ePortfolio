@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viknesh | Experience</title> 
+    <meta name="description" content="Vikneshwaran's project experience: final year project, web game, data analytics, PNE Electric internship, automation, and leadership.">
+    <title>Viknesh | Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -17,6 +20,7 @@
     <script src="https://kit.fontawesome.com/a542e384bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
     <!-- HEADER START -->
     <header class="header" id="header">
         <nav class="nav container">
@@ -64,7 +68,7 @@
                             <a class="details_link" href="project-details.html#fyp">View project details</a>
                         </div>
                     </div>     
-                    <div class="exp1_image">
+                    <div class="exp1_image" data-tilt>
                         <img class="exp1_img" src="img/project img/cartip.png" alt="Virtual car customizer app preview" loading="lazy">
                     </div>
                 </article>   
@@ -80,7 +84,7 @@
                             <a class="details_link" href="project-details.html#bookearth">View project details</a>
                         </div>
                     </div>    
-                    <div class="exp2_image">
+                    <div class="exp2_image" data-tilt>
                         <img src="img/project img/lily.png" alt="Bookearth Worm Based Web Game artwork" class="exp2_img" loading="lazy">
                     </div>       
                 </article>
@@ -96,7 +100,7 @@
                             <a class="details_link" href="project-details.html#data-analysis">View project details</a>
                         </div>
                     </div>    
-                    <div class="exp1_image">
+                    <div class="exp1_image" data-tilt>
                         <img class="exp1_img" src="img/project img/dashboard.png" alt="Data analysis dashboard preview" loading="lazy">
                     </div>
                 </article>
@@ -112,7 +116,7 @@
                             <a class="details_link" href="project-details.html#pne-internship">View project details</a>
                         </div>
                     </div>    
-                    <div class="exp2_image">
+                    <div class="exp2_image" data-tilt>
                         <img src="img/project img/pne it.png" alt="IT internship project desk setup" class="exp2_img" loading="lazy">
                     </div>                       
                 </article>
@@ -128,7 +132,7 @@
                             <a class="details_link" href="project-details.html#auto-label">View project details</a>
                         </div>
                     </div>    
-                    <div class="exp1_image">
+                    <div class="exp1_image" data-tilt>
                         <img class="exp1_img" src="img/project img/pne label.png" alt="Auto labeling system equipment" loading="lazy">
                     </div>   
                 </article>               
@@ -144,7 +148,7 @@
                             <a class="details_link" href="project-details.html#leadership">View project details</a>
                         </div>
                     </div>    
-                    <div class="exp2_image">
+                    <div class="exp2_image" data-tilt>
                         <img src="img/project img/parttime.png" alt="Leadership and service activities" class="exp2_img" loading="lazy">
                     </div>        
                 </article>    
@@ -170,7 +174,7 @@
             </div>
 
             <span class="footer_copy">
-                <i class="fa-solid fa-copyright"></i> 2022 Copyright by Viknesh. 
+                <i class="fa-solid fa-copyright"></i> <span data-year>2026</span> Vikneshwaran Murugaian &middot; Built &amp; designed with care.
             </span>
         </div>
     </footer>
@@ -184,8 +188,12 @@
     <!-- SCROLLREVEAL -->
     <script src="js/scrollreveal.min.js"></script>
 
+    <!-- TILT (CDN, progressively enhanced) -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
+    <script src="js/enhance.js"></script>
 
 </body>
 </html>

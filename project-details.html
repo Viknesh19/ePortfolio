@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed case studies of Vikneshwaran's projects: roles, tech stack, decisions, and measurable impact.">
     <title>Viknesh | Project Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -17,6 +20,7 @@
     <script src="https://kit.fontawesome.com/a542e384bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
     <!-- HEADER START -->
     <header class="header" id="header">
         <nav class="nav container">
@@ -60,7 +64,7 @@
 
                 <div class="project_track" data-project-slider>
                     <article class="project_card project_card--featured" id="fyp">
-                        <div class="project_media project_media--hero">
+                        <div class="project_media project_media--hero" data-tilt>
                             <img src="img/project img/cartip.png" alt="Final year project mobile app preview" class="project_img" loading="lazy">
                             <div class="project_media-glow"></div>
                         </div>
@@ -449,7 +453,7 @@
             </div>
 
             <span class="footer_copy">
-                <i class="fa-solid fa-copyright"></i> 2022 Copyright by Viknesh.
+                <i class="fa-solid fa-copyright"></i> <span data-year>2026</span> Vikneshwaran Murugaian &middot; Built &amp; designed with care.
             </span>
         </div>
     </footer>
@@ -463,8 +467,12 @@
     <!-- SCROLLREVEAL -->
     <script src="js/scrollreveal.min.js"></script>
 
+    <!-- TILT (CDN, progressively enhanced) -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
+    <script src="js/enhance.js"></script>
 </body>
 </html>
 

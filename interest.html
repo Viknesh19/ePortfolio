@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viknesh | Interests</title> 
+    <meta name="description" content="Vikneshwaran's technical skills: Python, SQL, web and backend development, mobile apps, data analytics, and soft skills.">
+    <title>Viknesh | Interests</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -17,6 +20,7 @@
     <script src="https://kit.fontawesome.com/a542e384bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
     <!-- HEADER START -->
     <header class="header" id="header">
         <nav class="nav container">
@@ -53,8 +57,48 @@
             <p class="page_description">A practical view of the tools and strengths I use to build web systems, mobile apps, dashboards, and IT support workflows.</p>
         </div>
 
-        <div class="interest_container container">   
-                     
+        <div class="interest_container container">
+
+            <div class="sport_data">
+                <span class="category_marker"><i class="fa-solid fa-gauge-high"></i></span>
+                <h1 class="section_title">Proficiency Snapshot</h1>
+            </div>
+
+            <div class="skillbars">
+                <div class="meter" data-meter="90" data-reveal>
+                    <div class="meter_head"><span><i class="fa-brands fa-python"></i> Python</span><span class="meter_val">90%</span></div>
+                    <div class="meter_bar"><span class="meter_fill"></span></div>
+                </div>
+                <div class="meter" data-meter="85" data-reveal data-reveal-delay="60">
+                    <div class="meter_head"><span><i class="fa-solid fa-database"></i> SQL &amp; Databases</span><span class="meter_val">85%</span></div>
+                    <div class="meter_bar"><span class="meter_fill"></span></div>
+                </div>
+                <div class="meter" data-meter="85" data-reveal data-reveal-delay="120">
+                    <div class="meter_head"><span><i class="fa-brands fa-js"></i> HTML, CSS &amp; JavaScript</span><span class="meter_val">85%</span></div>
+                    <div class="meter_bar"><span class="meter_fill"></span></div>
+                </div>
+                <div class="meter" data-meter="75" data-reveal data-reveal-delay="180">
+                    <div class="meter_head"><span><i class="fa-solid fa-flask"></i> Flask &amp; Backend</span><span class="meter_val">75%</span></div>
+                    <div class="meter_bar"><span class="meter_fill"></span></div>
+                </div>
+                <div class="meter" data-meter="80" data-reveal data-reveal-delay="240">
+                    <div class="meter_head"><span><i class="fa-solid fa-chart-pie"></i> Data Analytics</span><span class="meter_val">80%</span></div>
+                    <div class="meter_bar"><span class="meter_fill"></span></div>
+                </div>
+                <div class="meter" data-meter="70" data-reveal data-reveal-delay="300">
+                    <div class="meter_head"><span><i class="fa-solid fa-mobile-screen-button"></i> Flutter &amp; Ionic</span><span class="meter_val">70%</span></div>
+                    <div class="meter_bar"><span class="meter_fill"></span></div>
+                </div>
+                <div class="meter" data-meter="70" data-reveal data-reveal-delay="360">
+                    <div class="meter_head"><span><i class="fa-brands fa-java"></i> Java, C &amp; C++</span><span class="meter_val">70%</span></div>
+                    <div class="meter_bar"><span class="meter_fill"></span></div>
+                </div>
+                <div class="meter" data-meter="85" data-reveal data-reveal-delay="420">
+                    <div class="meter_head"><span><i class="fa-solid fa-headset"></i> IT Support &amp; Ops</span><span class="meter_val">85%</span></div>
+                    <div class="meter_bar"><span class="meter_fill"></span></div>
+                </div>
+            </div>
+
             <div class="sport_data">
                 <span class="category_marker"><i class="fa-solid fa-code"></i></span>
                 <h1 class="section_title">Programming Languages</h1>
@@ -62,7 +106,7 @@
 
             <div class="interest_container container grid">
 
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/python.jpg" alt="Python code illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-brands fa-python int_icon"></i>
@@ -72,7 +116,7 @@
                     </div>
                 </article>
 
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/java.png" alt="Java programming illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-brands fa-java int_icon"></i>
@@ -82,7 +126,7 @@
                     </div>
                 </article>
 
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/c.jpg" alt="C programming illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-solid fa-code int_icon"></i>
@@ -92,7 +136,7 @@
                     </div>
                 </article>
 
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/c++.jpg" alt="C++ programming illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-solid fa-code int_icon"></i>
@@ -102,7 +146,7 @@
                     </div>
                 </article>
                 
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/sql.jpg" alt="SQL database illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-solid fa-database int_icon"></i>
@@ -120,7 +164,7 @@
 
             <div class="interest_container container grid">
 
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/html-css.jpg" alt="HTML, CSS, and JavaScript icons" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-brands fa-html5 int_icon"></i> <span class="int_icon">&</span> <i class="fa-brands fa-square-js int_icon"></i>
@@ -130,7 +174,7 @@
                     </div>
                 </article>
 
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/flask.png" alt="Flask framework illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-brands fa-python int_icon"></i>
@@ -147,7 +191,7 @@
             </div>
 
             <div class="interest_container container grid">
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/flutter.png" alt="Mobile app UI illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-brands fa-android int_icon"></i>
@@ -164,7 +208,7 @@
             </div>
 
             <div class="interest_container container grid">
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/data-clean.png" alt="Data cleaning workflow illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-solid fa-filter int_icon"></i>
@@ -174,7 +218,7 @@
                     </div>
                 </article>
 
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/Ddashboard.png" alt="Dashboard charts illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-solid fa-chart-pie int_icon"></i>
@@ -191,7 +235,7 @@
             </div>
 
             <div class="interest_container container grid">
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/soft-skill.png" alt="Collaboration and teamwork illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-solid fa-lightbulb int_icon"></i>
@@ -201,7 +245,7 @@
                     </div>
                 </article>
 
-                <article class="int_card">
+                <article class="int_card" data-tilt>
                     <img class="int_img" src="img/int/lang.jpeg" alt="Language communication illustration" loading="lazy">
                     <div class="modal">
                         <span class="int_subtitle"><i class="fa-solid fa-language int_icon"></i>
@@ -237,7 +281,7 @@
             </div>
 
             <span class="footer_copy">
-                <i class="fa-solid fa-copyright"></i> 2022 Copyright by Viknesh. 
+                <i class="fa-solid fa-copyright"></i> <span data-year>2026</span> Vikneshwaran Murugaian &middot; Built &amp; designed with care.
             </span>
         </div>
     </footer>
@@ -251,8 +295,12 @@
     <!-- SCROLLREVEAL -->
     <script src="js/scrollreveal.min.js"></script>
 
+    <!-- TILT (CDN, progressively enhanced) -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
+    <script src="js/enhance.js"></script>
 
 </body>
 </html>
